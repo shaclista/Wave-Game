@@ -2,7 +2,7 @@ package it.unimol.wave_dash.input;
 
 import it.unimol.wave_dash.Game;
 import it.unimol.wave_dash.objects.GameHandler;
-import it.unimol.wave_dash.utils.AudioPlayer;
+//import it.unimol.wave_dash.utils.AudioPlayer;
 import it.unimol.wave_dash.window.HUD;
 import it.unimol.wave_dash.objects.enemies.Enemy;
 import it.unimol.wave_dash.objects.ID;
@@ -45,14 +45,14 @@ public class Menu extends MouseAdapter {
 
                 handler.addObject(new Player(Game.WIDTH / 2 - 32, Game.HEIGHT / 2 - 32, ID.Player, handler));
                 handler.addObject((new Enemy(random.nextInt(Game.WIDTH), random.nextInt(Game.HEIGHT), ID.Enemy, handler)));
-                AudioPlayer.getSound("sound").play();
+                //AudioPlayer.getSound("sound").play();
 
             }
 
             //Bottone QUIT
             if (isMouseOverTarget(235, 350, mx, my, 200, 64)) {
 
-                AudioPlayer.getSound("sound").play();
+                //AudioPlayer.getSound("sound").play();
 
                 System.exit(1);
 
@@ -61,7 +61,7 @@ public class Menu extends MouseAdapter {
             //Bottone HELP
             if (isMouseOverTarget(235, 250, mx, my, 200, 64)) {
                 game.gameState = Game.STATE.Help;
-                AudioPlayer.getSound("sound").play();
+                //AudioPlayer.getSound("sound").play();
 
             }
 
@@ -72,7 +72,7 @@ public class Menu extends MouseAdapter {
         if (game.gameState == Game.STATE.Help) {
             if (isMouseOverTarget(40, 30, mx, my, 150, 40)) {
                 game.gameState = Game.STATE.Menu;
-                AudioPlayer.getSound("sound").play();
+                //AudioPlayer.getSound("sound").play();
 
                 return;
 
@@ -85,7 +85,7 @@ public class Menu extends MouseAdapter {
 
             if (isMouseOverTarget(50, 230, mx, my, 80, 35)) {
                 game.gameState = Game.STATE.Menu;
-                AudioPlayer.getSound("sound").play();
+                //AudioPlayer.getSound("sound").play();
                 return;
             } else if (isMouseOverTarget(465, 230, mx, my, 150, 35)) {
 
@@ -99,7 +99,7 @@ public class Menu extends MouseAdapter {
 
                     handler.addObject(new Player(Game.WIDTH / 2 - 32, Game.HEIGHT / 2 - 32, ID.Player, handler));
 
-                    AudioPlayer.getSound("sound").play();
+                   // AudioPlayer.getSound("sound").play();
 
 
                 }
@@ -111,7 +111,7 @@ public class Menu extends MouseAdapter {
 
             if (isMouseOverTarget(50, 230, mx, my, 80, 35)) {
                 game.gameState = Game.STATE.Menu;
-                AudioPlayer.getSound("sound").play();
+                //AudioPlayer.getSound("sound").play();
                 return;
             } else if (isMouseOverTarget(465, 230, mx, my, 150, 35)) {
 
@@ -126,7 +126,7 @@ public class Menu extends MouseAdapter {
                     handler.addObject(new Enemy(random.nextInt(Game.WIDTH), random.nextInt(Game.HEIGHT), ID.Enemy, handler));
 
 
-                    AudioPlayer.getSound("sound").play();
+                   // AudioPlayer.getSound("sound").play();
 
 
                 }

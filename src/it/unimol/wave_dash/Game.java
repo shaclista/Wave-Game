@@ -1,6 +1,6 @@
 package it.unimol.wave_dash;
 
-import it.unimol.wave_dash.utils.AudioPlayer;
+//import it.unimol.wave_dash.utils.AudioPlayer;
 import it.unimol.wave_dash.input.Menu;
 import it.unimol.wave_dash.input.MovementPlayer;
 import it.unimol.wave_dash.objects.GameHandler;
@@ -61,7 +61,7 @@ public class Game extends Canvas {
         menu = new it.unimol.wave_dash.input.Menu(this, handler,hud);
         this.addKeyListener(new MovementPlayer(handler, hud, this));
         this.addMouseListener(new Menu(this, handler,hud));
-        AudioPlayer.load();
+        //AudioPlayer.load();
         new Window(WIDTH, HEIGHT, "Wave!", this);
         //AudioPlayer.getMusic("music").loop();
         hud = new HUD();

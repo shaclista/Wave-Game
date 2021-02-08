@@ -1,4 +1,4 @@
-package it.unimol.wave_dash.utils;
+/*package it.unimol.wave_dash.utils;
 
 import org.newdawn.slick.Music;
 import org.newdawn.slick.SlickException;
@@ -7,9 +7,6 @@ import org.newdawn.slick.Sound;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Metodo che gestisce l'input della musica e del suono del gioco
- */
 public class AudioPlayer {
 
 
@@ -39,4 +36,4 @@ public class AudioPlayer {
 
 
 
-}
+}*/
