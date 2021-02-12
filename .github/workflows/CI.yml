@@ -62,4 +62,4 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: spotbugs_wave_game
-          path: target/spotbugsXml.xml
+          path: target
