@@ -27,3 +27,21 @@ jobs:
       with:
         name: wave_game_artifact
         path: outputBuild/Wave-Game-1.0.jar
+ 
+  checkstyle:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Start Checkstyle
+        run: mvn checkstyle:checkstyle
+      - name: Checkstyle Wave-Game
+        uses: actions/upload-artifact@v1
+        with:
+          name: checkstyle_wave_game
+          path: target/checkstyle-result.xml
