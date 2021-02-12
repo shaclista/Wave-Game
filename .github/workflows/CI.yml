@@ -45,3 +45,21 @@ jobs:
         with:
           name: checkstyle_wave_game
           path: target/checkstyle-result.xml
+
+  spotbugs:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Start Spotbugs
+        run: mvn spotbugs:spotbugs
+      - name: Spotbugs Wave-Game
+        uses: actions/upload-artifact@v1
+        with:
+          name: spotbugs_wave_game
+          path: target/spotbugsXml.xml
