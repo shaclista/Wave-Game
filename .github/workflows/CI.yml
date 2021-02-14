@@ -57,9 +57,9 @@ jobs:
         with:
           java-version: 1.8
       - name: Start Spotbugs
-        run: mvn spotbugs:spotbugs
+        run: mvn -B compile spotbugs:spotbugs
       - name: Spotbugs Wave-Game
         uses: actions/upload-artifact@v1
         with:
           name: spotbugs_wave_game
-          path: target
+          path: target/spotbugsXml.xml
